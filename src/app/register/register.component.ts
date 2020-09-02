@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators, FormBuilder } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,15 +10,26 @@ import { FormControl } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  fname = new FormControl();
-  lname = new FormControl();
-  email = new FormControl();
-  password = new FormControl();
-  phno = new FormControl();
+  public fbFormGroup = this.fb.group({
+    fname: ['', Validators.required],
+    lname: ['', Validators.required],
+    password: ['', Validators.required],
+    email: ['', Validators.required],
+    phoneNo: ['', Validators.required],
+  });
 
-  constructor() { }
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  async registerHere() {
+    const data = this.fbFormGroup.value;
+    const url = 'http://localhost:3001/addreguser';
+
+    await this.http.post(url, data).toPromise();
+
+    this.router.navigate(['sign-in']);
+
+  }
 }

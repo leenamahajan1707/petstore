@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './contact/contact.component';
+import {  HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     FontAwesomeModule,
     ReactiveFormsModule,
+    HttpClientModule,
     
   ],
   providers: [],
