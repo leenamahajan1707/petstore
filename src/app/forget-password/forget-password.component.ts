@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forget-password',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgetPasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private http: HttpClient, private fb: FormBuilder) { }
 
   ngOnInit(): void {
+  }
+
+  public fbFormGroup = this.fb.group({
+    email: ['', Validators.required],
+    password: ['', Validators.required],
+  });
+
+  async resetHere() {
+    const data = this.fbFormGroup.value;
+    const url = "http://localhost:3001/userforgetpass";
+    await this.http.post(url, data).toPromise();
+    await alert("Password Successfully Reset!!");
+    this.router.navigate(['sign-in']);
+
   }
 
 }
