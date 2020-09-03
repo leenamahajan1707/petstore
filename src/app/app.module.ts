@@ -13,6 +13,8 @@ import { ContactComponent } from './contact/contact.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './navbar/navbar.component';
+import { IndexComponent } from './index/index.component';
 
 
 
@@ -25,7 +27,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     AddItemComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavbarComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

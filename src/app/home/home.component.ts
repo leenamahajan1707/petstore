@@ -12,10 +12,11 @@ export class HomeComponent implements OnInit {
   public isMenuCollapsed = true;
   faShoppingCart = faShoppingCart;
 
-  // images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
-
   images = ['dog4', 'dog2', 'dog3'].map((n) => `/assets/${n}.png`);
   nav = ['contact', 'sign-in', 'sign-up', 'addItem', 'home'];
+
+  // public islogin = false;
+  
 
   LogoutHere() {
     sessionStorage.removeItem('sid');
@@ -28,10 +29,10 @@ export class HomeComponent implements OnInit {
   }
 
 
-  collapsed = true;
-  toggleCollapsed(): void {
-    this.collapsed = !this.collapsed;
+  // collapsed = true;
+  // toggleCollapsed(): void {
+  //   this.collapsed = !this.collapsed;
 
-  }
+  // }
 
 }

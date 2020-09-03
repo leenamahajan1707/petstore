@@ -1,34 +1,4 @@
 <div class="fluid-container">
-    <!-- <div class="bgimg"> -->
-    <!-- <nav id="mainNavbar" class="navbar navbar-expand-lg p-3 navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand text-warning font-weight-bold" style="font-size: larger;">PetCareStore</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"
-                (click)="toggleCollapsed()">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navbarContent " class="text-center " [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
-                <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item">
-                        <a routerLink="contact" class="nav-link text-white">contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a routerLink="sign-in" class="nav-link text-white">sign in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a routerLink="sign-up" class="nav-link text-white">sign up</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="d-flex justify-content-center">
-
-                            <fa-icon [icon]="faShoppingCart" class="text-warning"></fa-icon>
-                            <a routerLink="addItem" class="nav-link text-white"> My cart</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-        </nav> -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark  mb-3" style="color: white;">
         <a class="navbar-brand" [routerLink]="'.'" style="font-size: 30px; color: gold;">PetCareStore</a>
@@ -52,8 +22,11 @@
                     <a class="nav-link" [routerLink]="nav[2]" (click)="isMenuCollapsed = true">Register</a>
                 </li>
                 <li class=" nav-item input-group-prepend active m-2">
-                    <fa-icon [icon]="faShoppingCart" class="text-warning"></fa-icon>
-                    <a class="nav-link" [routerLink]="nav[3]" (click)="isMenuCollapsed = true"> My cart</a>
+                    <fa-icon [icon]="faShoppingCart" class="text-warning"></fa-icon> 
+                     <a class="nav-link" [routerLink]="nav[3]" (click)="isMenuCollapsed = true" > My cart</a>
+                
+                    
+                    <!-- <input type="button" value="My Cart"  [disabled]="!islogin" class="btn btn-outline-info"> -->
                 </li>
                 <li class="nav-item active m-2">
                     <!-- <a class="nav-link" [routerLink]="nav[4]" (click)="isMenuCollapsed = true"

@@ -9,12 +9,12 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: LoginComponent },
   { path: 'sign-up', component: RegisterComponent },
   { path: 'addItem', component: AddItemComponent },
   { path: 'contact', component: ContactComponent },
-   { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'forgetpw', component: ForgetPasswordComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
