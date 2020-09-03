@@ -11,6 +11,8 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './contact/contact.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -22,7 +24,8 @@ import {  HttpClientModule } from '@angular/common/http';
     ForgetPasswordComponent,
     HomeComponent,
     AddItemComponent,
-    ContactComponent
+    ContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import {  HttpClientModule } from '@angular/common/http';
     FontAwesomeModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
     
   ],
   providers: [],
