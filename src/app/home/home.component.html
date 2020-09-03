@@ -1,69 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="fluid-container">
+    <!-- <div class="bgimg"> -->
+    <!-- <nav id="mainNavbar" class="navbar navbar-expand-lg p-3 navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand text-warning font-weight-bold" style="font-size: larger;">PetCareStore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"
+                (click)="toggleCollapsed()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarContent " class="text-center " [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item">
+                        <a routerLink="contact" class="nav-link text-white">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="sign-in" class="nav-link text-white">sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="sign-up" class="nav-link text-white">sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="d-flex justify-content-center">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-
-    <title>petCareStore</title>
-
-</head>
-
-<body>
-    <div class="fluid-container">
-        <div class="bgimg">
-            <nav id="mainNavbar" class="navbar navbar-expand-lg p-3 navbar-dark bg-dark fixed-top">
-                <a class="navbar-brand text-warning font-weight-bold" style="font-size: larger;">PetCareStore</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"
-                    (click)="toggleCollapsed()">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="navbarContent " class="text-center "
-                    [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
-                    <ul class="navbar-nav ml-auto ">
-                        <li class="nav-item">
-                            <a routerLink="contact" class="nav-link text-white">contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a routerLink="sign-in" class="nav-link text-white">sign in</a>
-                        </li>
-                        <li class="nav-item">
-                            <a routerLink="sign-up" class="nav-link text-white">sign up</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="d-flex justify-content-center">
-
-                                <fa-icon [icon]="faShoppingCart" class="text-warning"></fa-icon>
-                                <a routerLink="addItem" class="nav-link text-white"> My cart</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </nav>
-            <div class="container text-center headerset ">
-                <h2>Welcome To Our Store</h2>
-                <h1>It's nice to meet you</h1>
-                <button class="btn btn-danger text-white btn-lg">Contact us</button>
+                            <fa-icon [icon]="faShoppingCart" class="text-warning"></fa-icon>
+                            <a routerLink="addItem" class="nav-link text-white"> My cart</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
+
+        </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  mb-3" style="color: white;">
+        <a class="navbar-brand" [routerLink]="'.'" style="font-size: 30px; color: gold;">PetCareStore</a>
+
+        <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+            &#9776;
+        </button>
+
+        <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item active m-2">
+                    <!-- Step 4: Close the menu when a link is clicked. -->
+                    <a class="nav-link" [routerLink]="nav[0]" (click)="isMenuCollapsed = true">Contact</a>
+                </li>
+                <li class="nav-item active m-2">
+                    <a class="nav-link" [routerLink]="nav[1]" (click)="isMenuCollapsed = true">Login</a>
+                </li>
+                <li class="nav-item active m-2">
+                    <a class="nav-link" [routerLink]="nav[2]" (click)="isMenuCollapsed = true">Register</a>
+                </li>
+                <li class=" nav-item input-group-prepend active m-2">
+                    <fa-icon [icon]="faShoppingCart" class="text-warning"></fa-icon>
+                    <a class="nav-link" [routerLink]="nav[3]" (click)="isMenuCollapsed = true"> My cart</a>
+                </li>
+                <li class="nav-item active m-2">
+                    <!-- <a class="nav-link" [routerLink]="nav[4]" (click)="isMenuCollapsed = true"
+                        style="color: white;">Logout</a> -->
+                    <input type="button" value="Logout" (click)="LogoutHere()" class="btn btn-outline-info">
+                </li>
+
+            </ul>
         </div>
+    </nav>
 
-    </div>
+    <!-- <div class="container text-center headerset ">
+            <h2>Welcome To Our Store</h2>
+            <h1>It's nice to meet you</h1>
+            <button class="btn btn-danger text-white btn-lg">Contact us</button>
+        </div> -->
+    <!-- </div> -->
 
-</body>
+    <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="images[0]" alt="Random first slide">
+            </div>
+            <!-- <div class="carousel-caption ">
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div> -->
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="images[1]" alt="Random second slide">
+            </div>
+            <!-- <div class="carousel-caption">
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div> -->
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="images[2]" alt="Random third slide">
+            </div>
 
-</html>
+            <!-- <div class="carousel-caption">
+                <button>click</button>
+            </div> -->
+        </ng-template>
+    </ngb-carousel>
+
+
+
+
+</div>

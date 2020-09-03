@@ -16,8 +16,8 @@ export class ForgetPasswordComponent implements OnInit {
   }
 
   public fbFormGroup = this.fb.group({
-    email: ['', Validators.required],
-    password: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(5), Validators.pattern('[a-zA-Z0-9 ]*')]],
   });
 
   async resetHere() {

@@ -10,15 +10,20 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  public fbFormGroup = this.fb.group({
-    fname: ['', Validators.required],
-    lname: ['', Validators.required],
-    password: ['', Validators.required],
-    email: ['', Validators.required],
-    phoneNo: ['', Validators.required],
-  });
+  public uiInvalidCredential = false;
 
   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
+
+
+  public fbFormGroup = this.fb.group({
+    fname: ['', [Validators.required]],
+    lname: ['', [Validators.required]],
+    password: ['', [Validators.required, Validators.minLength(5), Validators.pattern('[a-zA-Z0-9 ]*')]],
+    email: ['', [Validators.required, Validators.email]],
+    phoneNo: ['', [Validators.required, Validators.minLength(10)]],
+    //Validators.pattern('/^([+]\d{2})?\d{10}$/')
+  });
+
 
   ngOnInit(): void {
   }
@@ -27,9 +32,14 @@ export class RegisterComponent implements OnInit {
     const data = this.fbFormGroup.value;
     const url = 'http://localhost:3001/addreguser';
 
-    await this.http.post(url, data).toPromise();
+    const result: any = await this.http.post(url, data).toPromise();
 
-    this.router.navigate(['sign-in']);
+
+    if (result.message) {
+      this.router.navigate(['sign-in']);
+    } else {
+      this.uiInvalidCredential = true;
+    }
 
   }
 }
