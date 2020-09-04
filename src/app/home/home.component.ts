@@ -70,6 +70,24 @@ export class HomeComponent implements OnInit {
     this.petname = name.trim();
     this.router.navigate(['addItem'], { queryParams: { name: this.petname } });
   }
+  toOrder7()
+  {
+  let name = document.querySelector("#seven").innerHTML;
+    this.petname = name.trim();
+    this.router.navigate(['order'],{queryParams:{name:this.petname}});
+  }
+  toOrder8()
+  {
+  let name = document.querySelector("#eight").innerHTML;
+    this.petname = name.trim();
+    this.router.navigate(['order'],{queryParams:{name:this.petname}});
+  }
+  toOrder9()
+  {
+  let name = document.querySelector("#nine").innerHTML;
+    this.petname = name.trim();
+    this.router.navigate(['order'],{queryParams:{name:this.petname}});
+  }
 
 
 
