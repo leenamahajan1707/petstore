@@ -1,12 +1,15 @@
-/* *{
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
     font-family: 'roboto',sans-serif,'Times New Roman', Times, serif;
-}
-body{
-    background: url('7.jpg') no-repeat top center;
+
+    background: url('/assets/contact.jpg') no-repeat top center;
+    
+   
     background-size: cover;
     height: 100vh;
 }
@@ -90,4 +93,4 @@ color: red;
     .msg{
         width: 100%;
     }
-} */
+}
