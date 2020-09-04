@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit {
   nav = ['contact', 'sign-in', 'sign-up', 'addItem', 'home'];
 
   // public islogin = false;
-  
+
 
   LogoutHere() {
     sessionStorage.removeItem('sid');
-    this.router.navigate(['home'])
+    this.router.navigate(['index'])
   }
 
   constructor(private router: Router) { }

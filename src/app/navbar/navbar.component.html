@@ -11,26 +11,15 @@
         <ul class="navbar-nav ml-auto ">
             <li class="nav-item active m-2">
                 <!-- Step 4: Close the menu when a link is clicked. -->
-                <a class="nav-link" [routerLink]="nav[0]" (click)="isMenuCollapsed = true">Contact</a>
+                <a class="nav-link" [routerLink]="['contact']" (click)="isMenuCollapsed = true">Contact</a>
             </li>
             <li class="nav-item active m-2">
-                <a class="nav-link" [routerLink]="nav[1]" (click)="isMenuCollapsed = true">Login</a>
+                <a class="nav-link" [routerLink]="['sign-in']" (click)="isMenuCollapsed = true">Login</a>
             </li>
             <li class="nav-item active m-2">
-                <a class="nav-link" [routerLink]="nav[2]" (click)="isMenuCollapsed = true">Register</a>
+                <a class="nav-link" [routerLink]="['sign-up']" (click)="isMenuCollapsed = true">Register</a>
             </li>
-            <!-- <li class=" nav-item input-group-prepend active m-2">
-                <fa-icon [icon]="faShoppingCart" class="text-warning"></fa-icon> 
-                 <a class="nav-link" [routerLink]="nav[3]" (click)="isMenuCollapsed = true" > My cart</a>
-            
-                
-                <!-- <input type="button" value="My Cart"  [disabled]="!islogin" class="btn btn-outline-info"> -->
-            <!-- </li>
-            <li class="nav-item active m-2">
-                <!-- <a class="nav-link" [routerLink]="nav[4]" (click)="isMenuCollapsed = true"
-                    style="color: white;">Logout</a> 
-                <input type="button" value="Logout" (click)="LogoutHere()" class="btn btn-outline-info">
-            </li> --> 
+
 
         </ul>
     </div>
