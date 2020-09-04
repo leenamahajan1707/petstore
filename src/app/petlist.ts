@@ -7,8 +7,8 @@ export const PETS: Pet[] = [
     { id: 4, price: 1600, img: "assets/product/4.jpg", name: 'Mother & Baby Dog Food' },
     { id: 5, price: 1200, img: "assets/product/5.jpg", name: 'Orijen Senior Dog Food' },
     { id: 6, price: 1999, img: "assets/product/6.jpg", name: 'Royal Canin Boxer Dog Food' },
-    { id: 7, price: 1999, img: "assets/product/T1.jpg", name: 'Dog Boneshape Toy' },
-    { id: 8, price: 1999, img: "assets/product/A1.jpg", name: 'Dog Shampoo' },
-    { id: 9, price: 1999, img: "assets/product/T2.jpg", name: 'spike ball' },
+    { id: 7, price: 679, img: "assets/product/T1.jpg", name: 'Dog Boneshape Toy' },
+    { id: 8, price: 199, img: "assets/product/A1.jpg", name: 'Dog Shampoo' },
+    { id: 9, price: 299, img: "assets/product/T2.jpg", name: 'spike ball' },
 
 ];
