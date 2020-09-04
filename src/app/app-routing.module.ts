@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IndexComponent } from './index/index.component';
+import { OrderComponent } from './order/order.component';
 
 const routes: Routes = [
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'sign-up', component: RegisterComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'addItem', component: AddItemComponent },
+  { path: 'order', component: OrderComponent },
  
   { path: 'home', component: HomeComponent },
   { path: 'forgetpw', component: ForgetPasswordComponent },

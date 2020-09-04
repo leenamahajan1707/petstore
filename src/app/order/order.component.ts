@@ -6,12 +6,11 @@ import { PETS } from "./../petlist";
 declare var $:JQueryStatic;
 
 @Component({
-  selector: 'app-add-item',
-  templateUrl: './add-item.component.html',
-  styleUrls: ['./add-item.component.css']
+  selector: 'app-order',
+  templateUrl: './order.component.html',
+  styleUrls: ['./order.component.css']
 })
-export class AddItemComponent implements OnInit {
-
+export class OrderComponent implements OnInit {
   SelectedPet: Pet;
   msg = new FormControl();
   add = new FormControl();
@@ -50,5 +49,6 @@ export class AddItemComponent implements OnInit {
   {
     this.router.navigate(['home'])
   }
+
 
 }

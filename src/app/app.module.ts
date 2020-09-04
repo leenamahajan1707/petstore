@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IndexComponent } from './index/index.component';
+import { OrderComponent } from './order/order.component';
 
 
 
@@ -29,7 +30,8 @@ import { IndexComponent } from './index/index.component';
     ContactComponent,
     PageNotFoundComponent,
     NavbarComponent,
-    IndexComponent
+    IndexComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

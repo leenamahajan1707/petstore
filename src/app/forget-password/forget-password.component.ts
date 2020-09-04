@@ -27,6 +27,6 @@ export class ForgetPasswordComponent implements OnInit {
     await alert("Password Successfully Reset!!");
     this.router.navigate(['sign-in']);
 
-  }
+  } 
 
 }
