@@ -11,16 +11,6 @@
         <!-- Step 2: Add the ngbCollapse directive to the element below. -->
         <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto ">
-                <!-- <li class="nav-item active m-2">
-                    <!-- Step 4: Close the menu when a link is clicked. 
-                    <a class="nav-link" [routerLink]="nav[0]" (click)="isMenuCollapsed = true">Contact</a>
-                </li>
-                <li class="nav-item active m-2">
-                    <a class="nav-link" [routerLink]="nav[1]" (click)="isMenuCollapsed = true">Login</a>
-                </li>
-                <li class="nav-item active m-2">
-                    <a class="nav-link" [routerLink]="nav[2]" (click)="isMenuCollapsed = true">Register</a>
-                </li> -->
                 <li class=" nav-item input-group-prepend active m-2">
                     <fa-icon [icon]="faShoppingCart" class="text-warning"></fa-icon>
                     <a class="nav-link" routerLink="/addItem" (click)="isMenuCollapsed = true"> My cart</a>
@@ -50,25 +40,16 @@
             <div class="picsum-img-wrapper">
                 <img [src]="images[0]" alt="Random first slide">
             </div>
-            <!-- <div class="carousel-caption ">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div> -->
         </ng-template>
         <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
                 <img [src]="images[1]" alt="Random second slide">
             </div>
-            <!-- <div class="carousel-caption">
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div> -->
         </ng-template>
         <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
                 <img [src]="images[2]" alt="Random third slide">
             </div>
-
             <!-- <div class="carousel-caption">
                 <button>click</button>
             </div> -->
