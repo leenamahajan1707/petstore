@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   images = ['dog4', 'dog2', 'dog3'].map((n) => `/assets/${n}.png`);
   nav = ['contact', 'sign-in', 'sign-up', 'addItem', 'home'];
 
-  
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
 
   LogoutHere() {
     sessionStorage.removeItem('sid');
-    this.router.navigate(['index'])
+    this.router.navigate([''])
   }
 
 

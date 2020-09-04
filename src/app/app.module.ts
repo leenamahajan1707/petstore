@@ -10,12 +10,13 @@ import { HomeComponent } from './home/home.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './contact/contact.component';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IndexComponent } from './index/index.component';
 import { OrderComponent } from './order/order.component';
+import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
 
 
 
@@ -31,7 +32,8 @@ import { OrderComponent } from './order/order.component';
     PageNotFoundComponent,
     NavbarComponent,
     IndexComponent,
-    OrderComponent
+    OrderComponent,
+    HomeNavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import { OrderComponent } from './order/order.component';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
