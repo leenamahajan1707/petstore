@@ -15,12 +15,9 @@ const routes: Routes = [
   { path: 'sign-in', component: LoginComponent },
   { path: 'sign-up', component: RegisterComponent },
   { path: 'contact', component: ContactComponent },
-
+  { path: 'addItem', component: AddItemComponent },
  
-  { path: 'home', component: HomeComponent,children:[
-    { path: 'addItem', component: AddItemComponent },
-  ]
-  },
+  { path: 'home', component: HomeComponent },
   { path: 'forgetpw', component: ForgetPasswordComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
