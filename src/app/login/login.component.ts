@@ -32,9 +32,10 @@ export class LoginComponent implements OnInit {
     const url = "http://localhost:3001/authuser";
     const result: any = await this.http.post(url, data).toPromise();
 
-    if (result.message) {
+    
+    if (result.message == "success") {
       sessionStorage.setItem('sid', 'true');
-       alert("Login Successful!!");
+      await alert("Login Successful!!");
       this.router.navigate(['home']);
     } else {
       this.uiInvalidCredential = true;
