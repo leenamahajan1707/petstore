@@ -23,9 +23,9 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    // if (!sessionStorage.getItem('sid')) {
-    //   this.router.navigate(['sign-in']);
-    // }
+    if (!sessionStorage.getItem('sid')) {
+      this.router.navigate(['sign-in']);
+    }
   }
 
   LogoutHere() {
