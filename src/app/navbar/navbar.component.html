@@ -10,6 +10,9 @@
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto ">
             <li class="nav-item active m-2">
+                <a class="nav-link" routerLink="/" (click)="isMenuCollapsed = true">Home</a>
+            </li>
+            <li class="nav-item active m-2">
                 <!-- Step 4: Close the menu when a link is clicked. -->
                 <a class="nav-link" routerLink="/contact" (click)="isMenuCollapsed = true">Contact</a>
             </li>
