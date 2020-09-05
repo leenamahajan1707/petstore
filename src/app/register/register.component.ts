@@ -36,6 +36,7 @@ export class RegisterComponent implements OnInit {
 
 
     if (result.message) {
+       alert("Successfully Registered!!");
       this.router.navigate(['sign-in']);
     } else {
       this.uiInvalidCredential = true;
